@@ -1,5 +1,6 @@
 ## **Unity Test Challenge**
 
+##### Unity Tasks for UI and Mechanics
 #### Setup:
 - [Install Unity 2021.3.5f1](https://unity3d.com/get-unity/download/archive) (Project is built on this stable version)
 - [Fork Repository to your GitHub](https://github.com/vanja032/UnityTestChallenge.git) or clone the project to local from the **initial** branch
@@ -45,6 +46,9 @@ All resources needed for the UI can be found in the folder: **Assets/Resources**
 - **[TODO]** If the user lost the level, the Level Ended Popup should be shown with the title: **"LEVEL LOST"** in **red** color
 - **[TODO]** If the user won the level, the Level Ended Popup popup should be shown with the title: **"LEVEL WON"** in **green** color
 - Both of these popups have also options for Replay and going back to Main Screen  
+
+##### Player Controller Mechanics:
+- **[TODO]** Make a mobile input for the player character controller (Bonus)
 
 #### Additional Resources:
 - [job fair gameplay.mp4](https://drive.google.com/file/d/1a0Sw97lHh7eRRrzLEMzPh8SWcipBAmtG/view?usp=sharing)
