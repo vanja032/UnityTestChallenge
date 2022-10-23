@@ -25,12 +25,12 @@ Gameplay is realized through scheduling events that are executed on Tick in Simu
 All resources needed for the UI can be found in the folder: **Assets/Resources**
 #### End Goal:
 [Video of completed game UI implementation](https://drive.google.com/file/d/1a0Sw97lHh7eRRrzLEMzPh8SWcipBAmtG/view?usp=sharing)
-##### Main Menu:
+### Main Menu:
 - There is a title of the game, text input for username, and a button for playing the game
 - **[TODO]** Play button should be interactable only if the username is entered
 - By clicking on the Play button user will be transferred to LevelScene and the game will start
 
-##### Level Scene:
+### Level Scene:
 - **[TODO]** In the top left corner, we should display the username
 - When a user starts the level amount of tokens and enemies killed will be reset to zero
 - In the right corner, we will display the number of enemies killed and tokens that the player collected
@@ -47,8 +47,10 @@ All resources needed for the UI can be found in the folder: **Assets/Resources**
 - **[TODO]** If the user won the level, the Level Ended Popup popup should be shown with the title: **"LEVEL WON"** in **green** color
 - Both of these popups have also options for Replay and going back to Main Screen  
 
-##### Player Controller Mechanics:
+### Player Controller Mechanics:
 - **[TODO]** Make a mobile input for the player character controller (Bonus)
+
+
 
 #### Additional Resources:
 - [job fair gameplay.mp4](https://drive.google.com/file/d/1a0Sw97lHh7eRRrzLEMzPh8SWcipBAmtG/view?usp=sharing)
