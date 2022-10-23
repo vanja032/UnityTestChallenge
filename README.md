@@ -56,3 +56,4 @@ All resources needed for the UI can be found in the folder: **Assets/Resources**
 
 Good luck!
 
+*[Project taken from source](https://github.com/Nordeus/jobfair21-frontend-challange.git)*
