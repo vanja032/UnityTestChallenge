@@ -40,6 +40,7 @@ namespace Platformer.UI
         {
             lblTokens.text = GameDatabase.Instance.CurrentUser.Tokens.ToString();
             lblEnemiesKilled.text = GameDatabase.Instance.CurrentUser.EnemiesKilled.ToString();
+            lblUsername.text = GameDatabase.Instance.CurrentUser.Username.ToString();
         }
 
         #region Event Handlers

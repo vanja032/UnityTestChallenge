@@ -33,6 +33,10 @@ namespace Platformer.Mechanics
         /*internal new*/ public AudioSource audioSource;
         public Health health;
         public bool controlEnabled = true;
+        [SerializeField] private bool mobileInput = false;
+        private Vector2 touchPosition;
+        private Vector2 newTouchPosition;
+        [SerializeField] private bool swipeUpCheck;
 
         bool jump;
         Vector2 move;
@@ -55,13 +59,48 @@ namespace Platformer.Mechanics
         {
             if (controlEnabled)
             {
-                move.x = Input.GetAxis("Horizontal");
-                if (jumpState == JumpState.Grounded && Input.GetButtonDown("Jump"))
-                    jumpState = JumpState.PrepareToJump;
-                else if (Input.GetButtonUp("Jump"))
+                if (!mobileInput)
                 {
-                    stopJump = true;
-                    Schedule<PlayerStopJump>().player = this;
+                    move.x = Input.GetAxis("Horizontal");
+                    if (jumpState == JumpState.Grounded && Input.GetButtonDown("Jump"))
+                        jumpState = JumpState.PrepareToJump;
+                    else if (Input.GetButtonUp("Jump"))
+                    {
+                        stopJump = true;
+                        Schedule<PlayerStopJump>().player = this;
+                    }
+                }
+                else
+                {
+                    //Debug.Log((Input.mousePosition.x - Screen.width / 2) / (Screen.width / 2));
+                    //move.x = Input.GetAxis("Horizontal"); 
+                    //Debug.Log(Input.mousePosition.x);
+                    if (Input.GetMouseButtonDown(0))
+                        newTouchPosition = new Vector2(Input.mousePosition.x, Input.mousePosition.y);
+                    if (Input.GetMouseButton(0))
+                    {
+                        move.x = 1.2f * (Input.mousePosition.x - Screen.width / 2) / (Screen.width / 2);
+                        touchPosition = newTouchPosition;
+                        newTouchPosition = new Vector2(Input.mousePosition.x, Input.mousePosition.y);
+                    }
+                    else
+                        move.x = 0;
+
+                    if (newTouchPosition.y - touchPosition.y >= 10 && Input.GetMouseButton(0))
+                        swipeUpCheck = true;
+                    else
+                        swipeUpCheck = false;
+
+                    if (jumpState == JumpState.Grounded && swipeUpCheck)/*Input.GetButtonDown("Jump")*/
+                    {
+                        jumpState = JumpState.PrepareToJump;
+                    }
+                    else if (Input.GetMouseButtonUp(0))/*Input.GetButtonUp("Jump")*/
+                    {
+                        stopJump = true;
+                        swipeUpCheck = false;
+                        Schedule<PlayerStopJump>().player = this;
+                    }
                 }
             }
             else

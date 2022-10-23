@@ -1,6 +1,6 @@
 # This .gitignore file should be placed at the root of your Unity project directory
 #
-# Get latest from https://github.com/github/gitignore/blob/master/Unity.gitignore
+# Get latest from https://github.com/github/gitignore/blob/main/Unity.gitignore
 #
 /[Ll]ibrary/
 /[Tt]emp/
@@ -14,8 +14,8 @@
 # They also could contain extremely sensitive data
 /[Mm]emoryCaptures/
 
-# Asset meta data should only be ignored when the corresponding asset is also ignored
-!/[Aa]ssets/**/*.meta
+# Recordings can get excessive in size
+/[Rr]ecordings/
 
 # Uncomment this line if you wish to ignore the asset store tools plugin
 # /[Aa]ssets/AssetStoreTools*
@@ -45,25 +45,7 @@ ExportedObj/
 *.pdb
 *.mdb
 *.opendb
-*.VC.dbLibrary/
-*.apk
-/*.csproj
-*.unityproj
-*.booproj
-*.pidb
-Temp/
-obj/
-bin/
-*.sln
-*.userprefs
-*.DotSettings
-*.suo
-*.mdb
-*.mdb.meta
-*.pdb
-*.DS_Store
-*.orig
-*.orig.meta
+*.VC.db
 
 # Unity3D generated meta files
 *.pidb.meta
@@ -77,6 +59,7 @@ sysinfo.txt
 *.apk
 *.aab
 *.unitypackage
+*.app
 
 # Crashlytics generated file
 crashlytics-build.properties
@@ -87,76 +70,3 @@ crashlytics-build.properties
 # Temporary auto-generated Android Assets
 /[Aa]ssets/[Ss]treamingAssets/aa.meta
 /[Aa]ssets/[Ss]treamingAssets/aa/*
-
-Assets/!LocalTestingStuff/
-Assets/!LocalTestingStuff.meta
-BuiltBundles/
-Assets/StreamingAssets/Bundles
-Assets/StreamingAssets/Bundles.meta
-Assets/StreamingAssets/Raw
-Assets/StreamingAssets/Raw.meta
-Assets/StreamingAssets/Settings
-Assets/StreamingAssets/Settings.meta
-Assets/StreamingAssets/crashlytics-build.properties
-Assets/StreamingAssets/crashlytics-build.properties.meta
-BuildSystem/BuildSystem.exe
-BuildSystem/buildInfo.txt
-Assets/Standard Assets/platformId.txt
-Assets/Standard Assets/platformId.txt.meta
-Assets/Standard Assets/ReSharperSettings.DotSettings.meta
-*.pdb.meta
-.vs/spellsoulsclient/v15/Browse.VC.db
-.vs/spellsoulsclient/v15/Browse.VC.opendb
-.vs/
-*.user
-
-.idea/
-.idea/.idea.spellsoulsclient/.idea/workspace.xml
-.idea/.idea.spellsoulsclient/.idea/contentModel.xml
-.idea/.idea.spellsoulsclient/.idea/workspace.xml
-Assets/Plugins/Editor/JetBrains/*
-/Assets/Plugins/Editor/JetBrains.meta
-/Assets/TextMesh Pro/Examples & Extras*
-
-*symbols.zip
-/Assets/!Local.meta
-/Assets/!Local/*
-/DllCache/
-.mayaSwatches/
-.vrayThumbs/
-/Assets/.Amplify*
-/languageserverconfig
-/.gradle/*
-
-
-# Common IntelliJ Platform excludes
-
-# User specific
-**/.idea/**/workspace.xml
-**/.idea/**/tasks.xml
-**/.idea/shelf/*
-**/.idea/dictionaries
-
-# Sensitive or high-churn files
-**/.idea/**/dataSources/
-**/.idea/**/dataSources.ids
-**/.idea/**/dataSources.xml
-**/.idea/**/dataSources.local.xml
-**/.idea/**/sqlDataSources.xml
-**/.idea/**/dynamic.xml
-
-# Rider
-# Rider auto-generates .iml files, and contentModel.xml
-**/.idea/**/*.iml
-**/.idea/**/contentModel.xml
-**/.idea/**/modules.xml
-/Assets/Plugins/Packages/**
-/Tools/BuildSystem/buildInfo.txt
-/Tools/SizeAnalyzer/data.json
-/Tools/SizeAnalyzer/output/*
-/Tools/SizeAnalyzer/BuildSize.txt
-/BuildLogs/*
-/Tools/BuildSystem/out.log
-/Tools/BuildSystem/default.properties
-/testResults/EditorTestResults.xml
-/BuiltBundlesAndRaws/*
