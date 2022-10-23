@@ -1,9 +1,11 @@
 ## **Unity Test Challenge**
+
 #### Setup:
 - [Install Unity 2021.3.5f1](https://unity3d.com/get-unity/download/archive) (Project is built on this stable version)
-- [Fork Repository to your GitHub](https://github.com/vanja032/UnityTestChallenge.git)
+- [Fork Repository to your GitHub](https://github.com/vanja032/UnityTestChallenge.git) or clone the project to local from the **initial** branch
 - Import Project to Unity and make sure to select PC platform (Win/Mac) before opening
 - Development resolution in GameView should be 1920x1080
+
 #### Game Description:
 We are working on a [platformer game](https://assetstore.unity.com/packages/templates/platformer-microgame-151055https://assetstore.unity.com/packages/templates/platformer-microgame-151055). Game Mechanics are implemented and working for the PC platform. For controls, we are using standard keys: wasd/arrows + space. You can try out the gameplay by opening MainScene, going into play mode, and hitting the play button.
 
@@ -55,5 +57,8 @@ All resources needed for the UI can be found in the folder: **Assets/Resources**
 - If you decide to go wild - make sure to tell us what have you done so we make sure to check it out!
 
 Good luck!
+
+###### *If you want to see the completed project, check the completed branch*
+
 
 *[Project taken from source](https://github.com/Nordeus/jobfair21-frontend-challange.git)*
