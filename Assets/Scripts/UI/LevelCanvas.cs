@@ -29,6 +29,11 @@ namespace Platformer.UI
             
             GameDatabase.Instance.ResetScore();
         }
+        
+        void Start()
+        {
+            lblUsername.text = GameDatabase.Instance.CurrentUser.Username.ToString();
+        }
 
         private void OnDestroy()
         {
@@ -40,7 +45,6 @@ namespace Platformer.UI
         {
             lblTokens.text = GameDatabase.Instance.CurrentUser.Tokens.ToString();
             lblEnemiesKilled.text = GameDatabase.Instance.CurrentUser.EnemiesKilled.ToString();
-            lblUsername.text = GameDatabase.Instance.CurrentUser.Username.ToString();
         }
 
         #region Event Handlers
